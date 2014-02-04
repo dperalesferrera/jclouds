@@ -21,6 +21,7 @@ import org.jclouds.Fallbacks.EmptyFluentIterableOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.openstack.ceilometer.v2.domain.Meter;
 import org.jclouds.openstack.ceilometer.v2.domain.Statistic;
+import org.jclouds.openstack.ceilometer.v2.options.QueryOptions;
 import org.jclouds.openstack.keystone.v2_0.filters.AuthenticateRequest;
 import org.jclouds.rest.annotations.Fallback;
 import org.jclouds.rest.annotations.RequestFilters;
@@ -79,10 +80,9 @@ public interface MetersApi {
     @Named("meters:statistics")
     @GET
     @Path("/v2/meters/{id}/statistics")
-//    @SelectJson("statistic")
     @Consumes(MediaType.APPLICATION_JSON)
     @Fallback(NullOnNotFoundOr404.class)
-    FluentIterable<Statistic> statistics(@PathParam("id") String id);
+    FluentIterable<Statistic> statistics(@PathParam("id") String id, QueryOptions... options);
 
 
 }
