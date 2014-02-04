@@ -20,49 +20,54 @@ package org.jclouds.openstack.v2_0;
  * An OpenStack service, such as Compute (Nova), Object Storage (Swift), or Image Service (Glance).
  * A service provides one or more endpoints through which users can access resources and perform
  * (presumably useful) operations.
- * 
+ *
  * @author Adrian Cole
  * @see <a href="http://docs.openstack.org/api/openstack-typeentity-service/2.0/content/Identity-Service-Concepts-e1362.html"
- *      />
+ * />
  */
 public interface ServiceType {
-   /**
-    * Object Storage (Swift)
-    */
-   public static final String OBJECT_STORE = "object-store";
-   
-   /**
-    * Compute (Nova)
-    */
-   public static final String COMPUTE = "compute";
-   
-   /**
-    * Image Service (Glance)
-    */
-   public static final String IMAGE = "image";
-   
-   /**
-    * Identity Service (Keystone)
-    */
-   public static final String IDENTITY = "identity";
-   
-   /**
-    * Network Service (Neutron)
-    */
-   public static final String NETWORK = "network";
-   
-   /**
-    * Block Storage (Cinder)
-    */
-   public static final String BLOCK_STORAGE = "volume";
-   
-   /**
-    * Database Service (Trove)
-    */
-   public static final String DATABASE_SERVICE = "databases";
+    /**
+     * Object Storage (Swift)
+     */
+    public static final String OBJECT_STORE = "object-store";
 
-   /**
-    * Queues Service (Marconi)
-    */
-   public static final String QUEUES = "queuing";
+    /**
+     * Compute (Nova)
+     */
+    public static final String COMPUTE = "compute";
+
+    /**
+     * Image Service (Glance)
+     */
+    public static final String IMAGE = "image";
+
+    /**
+     * Identity Service (Keystone)
+     */
+    public static final String IDENTITY = "identity";
+
+    /**
+     * Network Service (Neutron)
+     */
+    public static final String NETWORK = "network";
+
+    /**
+     * Block Storage (Cinder)
+     */
+    public static final String BLOCK_STORAGE = "volume";
+
+    /**
+     * Database Service (Trove)
+     */
+    public static final String DATABASE_SERVICE = "databases";
+
+    /**
+     * Queues Service (Marconi)
+     */
+    public static final String QUEUES = "queuing";
+
+    /**
+     * Database Service (Trove)
+     */
+    public static final String METERING = "metering";
 }

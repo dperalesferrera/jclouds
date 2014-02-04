@@ -1,0 +1,140 @@
+{"access": {
+    "token": {
+        "issued_at": "2014-02-03T19:21:03.547464",
+        "expires": "2014-02-04T19:21:03Z",
+        "id": "MIIO3QYJKoZIhvcNAQcCoIIOzjCCDsoCAQExCTAHBgUrDgMCGjCCDTMGCSqGSIb3DQEHAaCCDSQEgg0geyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMi0wM1QxOToyMTowMy41NDc0NjQiLCAiZXhwaXJlcyI6ICIyMDE0LTAyLTA0VDE5OjIxOjAzWiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkNlaWxvbWV0ZXIgdGVzdHMgRGF2aWQgUGVyYWxlcyIsICJlbmFibGVkIjogdHJ1ZSwgImlkIjogIjg0ZGNlZTI0MjY1YzQyZGQ5Mzc3ZmI1YWIzZTI2NTEzIiwgIm5hbWUiOiAiY2VpbG90ZXN0In19LCAic2VydmljZUNhdGFsb2ciOiBbeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vMTAuMTAuMTAuOTo4Nzc0L3YyLzg0ZGNlZTI0MjY1YzQyZGQ5Mzc3ZmI1YWIzZTI2NTEzIiwgInJlZ2lvbiI6ICJSZWdpb25PbmUiLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovLzEwLjEwLjEwLjk6ODc3NC92Mi84NGRjZWUyNDI2NWM0MmRkOTM3N2ZiNWFiM2UyNjUxMyIsICJpZCI6ICI3MTk5NDY4NmJkOTM0MjA4YWE5MDE0NzczZGY4MzIzMCIsICJwdWJsaWNVUkwiOiAiaHR0cDovLzEwLjk1LjIxNC4xOTk6ODc3NC92Mi84NGRjZWUyNDI2NWM0MmRkOTM3N2ZiNWFiM2UyNjUxMyJ9XSwgImVuZHBvaW50c19saW5rcyI6IFtdLCAidHlwZSI6ICJjb21wdXRlIiwgIm5hbWUiOiAibm92YSJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly8xMC4xMC4xMC45Ojk2OTYvIiwgInJlZ2lvbiI6ICJSZWdpb25PbmUiLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovLzEwLjEwLjEwLjk6OTY5Ni8iLCAiaWQiOiAiMTRkYWY3ZjY4ODk0NGMwNmExZDIwNWFkZGJmZGVkMWIiLCAicHVibGljVVJMIjogImh0dHA6Ly8xMC45NS4yMTQuMTk5Ojk2OTYvIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogIm5ldHdvcmsiLCAibmFtZSI6ICJxdWFudHVtIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovLzEwLjEwLjEwLjk6OTI5Mi8iLCAicmVnaW9uIjogIlJlZ2lvbk9uZSIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vMTAuMTAuMTAuOTo5MjkyLyIsICJpZCI6ICIwMTc3ZGUyMjE1YjY0NGU0ODUzZjkzZmRiZGVhMDhiOCIsICJwdWJsaWNVUkwiOiAiaHR0cDovLzEwLjk1LjIxNC4xOTk6OTI5Mi8ifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaW1hZ2UiLCAibmFtZSI6ICJnbGFuY2UifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vMTAuMTAuMTAuOTo4Nzc3LyIsICJyZWdpb24iOiAiUmVnaW9uT25lIiwgImludGVybmFsVVJMIjogImh0dHA6Ly8xMC4xMC4xMC45Ojg3NzcvIiwgImlkIjogIjE5ODFhMzM2OTdkZTQyYWVhZjY1NjhiMTczODU0ZWUzIiwgInB1YmxpY1VSTCI6ICJodHRwOi8vMTAuOTUuMjE0LjE5OTo4Nzc3LyJ9XSwgImVuZHBvaW50c19saW5rcyI6IFtdLCAidHlwZSI6ICJtZXRlcmluZyIsICJuYW1lIjogImNlaWxvbWV0ZXIifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vMTAuMTAuMTAuOTo4MDAwL3YxIiwgInJlZ2lvbiI6ICJSZWdpb25PbmUiLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovLzEwLjEwLjEwLjk6ODAwMC92MSIsICJpZCI6ICIxMmM2OGJiZTI3ZGI0NjVlYTY3NjY1MmU5YzY5Yzg1MCIsICJwdWJsaWNVUkwiOiAiaHR0cDovLzEwLjk1LjIxNC4xOTk6ODAwMC92MSJ9XSwgImVuZHBvaW50c19saW5rcyI6IFtdLCAidHlwZSI6ICJjbG91ZGZvcm1hdGlvbiIsICJuYW1lIjogImhlYXQtY2ZuIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovLzEwLjEwLjEwLjk6ODc3Ni92MS84NGRjZWUyNDI2NWM0MmRkOTM3N2ZiNWFiM2UyNjUxMyIsICJyZWdpb24iOiAiUmVnaW9uT25lIiwgImludGVybmFsVVJMIjogImh0dHA6Ly8xMC4xMC4xMC45Ojg3NzYvdjEvODRkY2VlMjQyNjVjNDJkZDkzNzdmYjVhYjNlMjY1MTMiLCAiaWQiOiAiOGE4ZTNjNzM3MmM2NDlmY2E3NjBlNzM3OGViNWQzZWMiLCAicHVibGljVVJMIjogImh0dHA6Ly8xMC45NS4yMTQuMTk5Ojg3NzYvdjEvODRkY2VlMjQyNjVjNDJkZDkzNzdmYjVhYjNlMjY1MTMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAidm9sdW1lIiwgIm5hbWUiOiAiY2luZGVyIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovLzEwLjEwLjEwLjk6ODc3My9zZXJ2aWNlcy9BZG1pbiIsICJyZWdpb24iOiAiUmVnaW9uT25lIiwgImludGVybmFsVVJMIjogImh0dHA6Ly8xMC4xMC4xMC45Ojg3NzMvc2VydmljZXMvQ2xvdWQiLCAiaWQiOiAiMjE5ZWI2MmNjZGI1NDlkOTlhZGNkMGMzZmExZTM4ZjEiLCAicHVibGljVVJMIjogImh0dHA6Ly8xMC45NS4yMTQuMTk5Ojg3NzMvc2VydmljZXMvQ2xvdWQifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiZWMyIiwgIm5hbWUiOiAiZWMyIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovLzEwLjEwLjEwLjk6ODAwNC92MS84NGRjZWUyNDI2NWM0MmRkOTM3N2ZiNWFiM2UyNjUxMyIsICJyZWdpb24iOiAiUmVnaW9uT25lIiwgImludGVybmFsVVJMIjogImh0dHA6Ly8xMC4xMC4xMC45OjgwMDQvdjEvODRkY2VlMjQyNjVjNDJkZDkzNzdmYjVhYjNlMjY1MTMiLCAiaWQiOiAiNTBjNjFiODU0ZmZkNDM0ZThiOWEwMWViNWIwOTc1YTgiLCAicHVibGljVVJMIjogImh0dHA6Ly8xMC45NS4yMTQuMTk5OjgwMDQvdjEvODRkY2VlMjQyNjVjNDJkZDkzNzdmYjVhYjNlMjY1MTMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAib3JjaGVzdHJhdGlvbiIsICJuYW1lIjogImhlYXQifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vMTAuMTAuMTAuOTozNTM1Ny92Mi4wIiwgInJlZ2lvbiI6ICJSZWdpb25PbmUiLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovLzEwLjEwLjEwLjk6NTAwMC92Mi4wIiwgImlkIjogIjI4MDQ3M2UwNDk3NTRlOWFiYmNjY2E3ZDU2YTZlZWY1IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vMTAuOTUuMjE0LjE5OTo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImNlaWxvdXNlciIsICJyb2xlc19saW5rcyI6IFtdLCAiaWQiOiAiY2YxZTgzMjk1ODZhNGY5NjhjYWU0ZjI4NWQzZDUwZTQiLCAicm9sZXMiOiBbeyJuYW1lIjogIk1lbWJlciJ9LCB7Im5hbWUiOiAiYWRtaW4ifV0sICJuYW1lIjogImNlaWxvdXNlciJ9LCAibWV0YWRhdGEiOiB7ImlzX2FkbWluIjogMCwgInJvbGVzIjogWyI5NmZmN2VhNzNmNzI0Y2EzYTI1NTJmNzUzZGM4MTQ3ZiIsICI2YTA2M2I2M2UzZGQ0YWU5OTA5MjA1YTJkOWI5NGEyMSJdfX19MYIBgTCCAX0CAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECAwFVW5zZXQxDjAMBgNVBAcMBVVuc2V0MQ4wDAYDVQQKDAVVbnNldDEYMBYGA1UEAwwPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIIBAFSkcnI35ovaK0BJSdYaH+FwoYhjJ8-R7-uidS91Xq-etW3rtOeybrrV423BSj6-hnJgIgDTkDbGWQqL4Jzh2md9FDHL-GsxY6Cmn0uTz9h7y4N+KlSD-VFBv8mncJHhQhtq7I7Un5xdJy09B7lK3mJOjFtY7MUfYRBEdh6LBSRyDYWCR7NKM1uFPyKQaT7fqOeblepE9FNe8-Qon17UvdhkioxXSznvVQfHnx6W1O6NK9weUjjI3yu-8-weS0jsxAR+APiBUjRKzR1PW-KWXaBgrpfqjMSD9kiuCzyC93RoPKRq27J7dR3E6x1lIxfILJ333ITb0FPXAIdM1f2QYQk=",
+        "tenant": {
+            "description": "Ceilometer tests David Perales",
+            "enabled": true,
+            "id": "84dcee24265c42dd9377fb5ab3e26513",
+            "name": "ceilotest"
+        }
+    },
+    "serviceCatalog": [
+        {
+            "endpoints": [{
+                "adminURL": "http://10.10.10.9:8774/v2/84dcee24265c42dd9377fb5ab3e26513",
+                "region": "RegionOne",
+                "internalURL": "http://10.10.10.9:8774/v2/84dcee24265c42dd9377fb5ab3e26513",
+                "id": "71994686bd934208aa9014773df83230",
+                "publicURL": "http://10.95.214.199:8774/v2/84dcee24265c42dd9377fb5ab3e26513"
+            }],
+            "endpoints_links": [],
+            "type": "compute",
+            "name": "nova"
+        },
+        {
+            "endpoints": [{
+                "adminURL": "http://10.10.10.9:9696/",
+                "region": "RegionOne",
+                "internalURL": "http://10.10.10.9:9696/",
+                "id": "14daf7f688944c06a1d205addbfded1b",
+                "publicURL": "http://10.95.214.199:9696/"
+            }],
+            "endpoints_links": [],
+            "type": "network",
+            "name": "quantum"
+        },
+        {
+            "endpoints": [{
+                "adminURL": "http://10.10.10.9:9292/",
+                "region": "RegionOne",
+                "internalURL": "http://10.10.10.9:9292/",
+                "id": "0177de2215b644e4853f93fdbdea08b8",
+                "publicURL": "http://10.95.214.199:9292/"
+            }],
+            "endpoints_links": [],
+            "type": "image",
+            "name": "glance"
+        },
+        {
+            "endpoints": [{
+                "adminURL": "http://10.10.10.9:8777/",
+                "region": "RegionOne",
+                "internalURL": "http://10.10.10.9:8777/",
+                "id": "1981a33697de42aeaf6568b173854ee3",
+                "publicURL": "http://10.95.214.199:8777/"
+            }],
+            "endpoints_links": [],
+            "type": "metering",
+            "name": "ceilometer"
+        },
+        {
+            "endpoints": [{
+                "adminURL": "http://10.10.10.9:8000/v1",
+                "region": "RegionOne",
+                "internalURL": "http://10.10.10.9:8000/v1",
+                "id": "12c68bbe27db465ea676652e9c69c850",
+                "publicURL": "http://10.95.214.199:8000/v1"
+            }],
+            "endpoints_links": [],
+            "type": "cloudformation",
+            "name": "heat-cfn"
+        },
+        {
+            "endpoints": [{
+                "adminURL": "http://10.10.10.9:8776/v1/84dcee24265c42dd9377fb5ab3e26513",
+                "region": "RegionOne",
+                "internalURL": "http://10.10.10.9:8776/v1/84dcee24265c42dd9377fb5ab3e26513",
+                "id": "8a8e3c7372c649fca760e7378eb5d3ec",
+                "publicURL": "http://10.95.214.199:8776/v1/84dcee24265c42dd9377fb5ab3e26513"
+            }],
+            "endpoints_links": [],
+            "type": "volume",
+            "name": "cinder"
+        },
+        {
+            "endpoints": [{
+                "adminURL": "http://10.10.10.9:8773/services/Admin",
+                "region": "RegionOne",
+                "internalURL": "http://10.10.10.9:8773/services/Cloud",
+                "id": "219eb62ccdb549d99adcd0c3fa1e38f1",
+                "publicURL": "http://10.95.214.199:8773/services/Cloud"
+            }],
+            "endpoints_links": [],
+            "type": "ec2",
+            "name": "ec2"
+        },
+        {
+            "endpoints": [{
+                "adminURL": "http://10.10.10.9:8004/v1/84dcee24265c42dd9377fb5ab3e26513",
+                "region": "RegionOne",
+                "internalURL": "http://10.10.10.9:8004/v1/84dcee24265c42dd9377fb5ab3e26513",
+                "id": "50c61b854ffd434e8b9a01eb5b0975a8",
+                "publicURL": "http://10.95.214.199:8004/v1/84dcee24265c42dd9377fb5ab3e26513"
+            }],
+            "endpoints_links": [],
+            "type": "orchestration",
+            "name": "heat"
+        },
+        {
+            "endpoints": [{
+                "adminURL": "http://10.10.10.9:35357/v2.0",
+                "region": "RegionOne",
+                "internalURL": "http://10.10.10.9:5000/v2.0",
+                "id": "280473e049754e9abbccca7d56a6eef5",
+                "publicURL": "http://10.95.214.199:5000/v2.0"
+            }],
+            "endpoints_links": [],
+            "type": "identity",
+            "name": "keystone"
+        }
+    ],
+    "user": {
+        "username": "ceilouser",
+        "roles_links": [],
+        "id": "cf1e8329586a4f968cae4f285d3d50e4",
+        "roles": [
+            {"name": "Member"},
+            {"name": "admin"}
+        ],
+        "name": "ceilouser"
+    },
+    "metadata": {
+        "is_admin": 0,
+        "roles": [
+            "96ff7ea73f724ca3a2552f753dc8147f",
+            "6a063b63e3dd4ae9909205a2d9b94a21"
+        ]
+    }
+}}
