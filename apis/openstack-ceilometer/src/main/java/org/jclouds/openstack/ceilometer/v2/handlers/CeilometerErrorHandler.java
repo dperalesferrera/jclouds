@@ -34,7 +34,7 @@ import static org.jclouds.http.HttpUtils.closeClientButKeepContentStream;
 @Singleton
 public class CeilometerErrorHandler implements HttpErrorHandler {
 
-    public void handleError(HttpCommand command, HttpResponse response) {
+    public void handleError(final HttpCommand command, final HttpResponse response) {
         // it is important to always read fully and close streams
         byte[] data = closeClientButKeepContentStream(response);
         String message = data != null ? new String(data) : null;

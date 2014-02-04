@@ -49,12 +49,12 @@ public class CeilometerApiMetadata extends BaseHttpApiMetadata<CeilometerApi> {
       this(new Builder());
    }
 
-   protected CeilometerApiMetadata(Builder builder) {
+   protected CeilometerApiMetadata(final Builder builder) {
       super(builder);
    }
 
    public static Properties defaultProperties() {
-      Properties properties = BaseHttpApiMetadata.defaultProperties();
+      final Properties properties = BaseHttpApiMetadata.defaultProperties();
       properties.setProperty(SERVICE_TYPE, ServiceType.METERING);
       properties.setProperty(CREDENTIAL_TYPE, CredentialTypes.PASSWORD_CREDENTIALS);
       return properties;

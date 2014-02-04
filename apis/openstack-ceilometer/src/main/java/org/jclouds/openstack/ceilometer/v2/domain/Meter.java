@@ -71,42 +71,42 @@ public class Meter {
         protected String user;
         protected String source;
 
-        public T meterId(String meterId) {
+        public T meterId(final String meterId) {
             this.meterId = meterId;
             return self();
         }
 
-        public T name(String name) {
+        public T name(final String name) {
             this.name = name;
             return self();
         }
 
-        public T project(String project) {
+        public T project(final String project) {
             this.project = project;
             return self();
         }
 
-        public T resource(String resource) {
+        public T resource(final String resource) {
             this.resource = resource;
             return self();
         }
 
-        public T type(String type) {
+        public T type(final String type) {
             this.type = type;
             return self();
         }
 
-        public T unit(String unit) {
+        public T unit(final String unit) {
             this.unit = unit;
             return self();
         }
 
-        public T user(String user) {
+        public T user(final String user) {
             this.user = user;
             return self();
         }
 
-        public T source(String source) {
+        public T source(final String source) {
             this.source = source;
             return self();
         }
@@ -115,7 +115,7 @@ public class Meter {
             return new Meter(user, name, resource, source, meterId, project, type, unit);
         }
 
-        public T fromSnapshot(Meter in) {
+        public T fromSnapshot(final Meter in) {
             return this
                     .user(in.getUser())
                     .name(in.getName())
@@ -164,7 +164,9 @@ public class Meter {
             "user_id", "name", "resource_id", "source", "meter_id", "project_id", "type", "unit",
     })
 
-    protected Meter(String user, String name, String resource, String source, String meterId, String project, String type, String unit) {
+    protected Meter(final String user, final String name, final String resource,
+                    final String source, final String meterId, final String project,
+                    final String type, final String unit) {
         this.meterId = meterId;
         this.name = name;
         this.project = project;
@@ -187,7 +189,7 @@ public class Meter {
         return project;
     }
 
-    public void setProject(String project) {
+    public void setProject(final String project) {
         this.project = project;
     }
 
@@ -195,7 +197,7 @@ public class Meter {
         return resource;
     }
 
-    public void setResource(String resource) {
+    public void setResource(final String resource) {
         this.resource = resource;
     }
 
@@ -203,7 +205,7 @@ public class Meter {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(final String type) {
         this.type = type;
     }
 
@@ -211,7 +213,7 @@ public class Meter {
         return unit;
     }
 
-    public void setUnit(String unit) {
+    public void setUnit(final String unit) {
         this.unit = unit;
     }
 
@@ -219,14 +221,15 @@ public class Meter {
         return user;
     }
 
-    public void setUser(String user) {
+    public void setUser(final String user) {
         this.user = user;
     }
 
     public String getSource() {
-        return source;       }
+        return source;
+    }
 
-    public void setSource(String source) {
+    public void setSource(final String source) {
         this.source = source;
     }
 

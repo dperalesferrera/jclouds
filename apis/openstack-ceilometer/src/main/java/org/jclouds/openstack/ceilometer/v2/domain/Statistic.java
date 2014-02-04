@@ -54,67 +54,67 @@ public class Statistic {
         protected String groupby;
         protected String unit;
 
-        public T count(BigDecimal count) {
+        public T count(final BigDecimal count) {
             this.count = count;
             return self();
         }
 
-        public T durationStart(String durationStart) {
+        public T durationStart(final String durationStart) {
             this.durationStart = durationStart;
             return self();
         }
 
-        public T min(BigDecimal min) {
+        public T min(final BigDecimal min) {
             this.min = min;
             return self();
         }
 
-        public T max(BigDecimal max) {
+        public T max(final BigDecimal max) {
             this.max = max;
             return self();
         }
 
-        public T durationEnd(String durationEnd) {
+        public T durationEnd(final String durationEnd) {
             this.durationEnd = durationEnd;
             return self();
         }
 
-        public T period(BigDecimal period) {
+        public T period(final BigDecimal period) {
             this.period = period;
             return self();
         }
 
-        public T sum(BigDecimal sum) {
+        public T sum(final BigDecimal sum) {
             this.sum = sum;
             return self();
         }
 
-        public T periodEnd(String periodEnd) {
+        public T periodEnd(final String periodEnd) {
             this.periodEnd = periodEnd;
             return self();
         }
 
-        public T duration(BigDecimal duration) {
+        public T duration(final BigDecimal duration) {
             this.duration = duration;
             return self();
         }
 
-        public T periodStart(String periodStart) {
+        public T periodStart(final String periodStart) {
             this.periodStart = periodStart;
             return self();
         }
 
-        public T avg(BigDecimal avg) {
+        public T avg(final BigDecimal avg) {
             this.avg = avg;
             return self();
         }
 
-        public T groupby(String groupby) {
+        public T groupby(final String groupby) {
             this.groupby = groupby;
             return self();
         }
 
-        public T unit(String unit) {
+        public T unit(final String unit) {
             this.unit = unit;
             return self();
         }
@@ -124,7 +124,7 @@ public class Statistic {
             return new Statistic(count, durationStart, min, max, durationEnd, period, sum, periodEnd, duration, periodStart, avg, groupby, unit);
         }
 
-        public T fromSnapshot(Statistic in) {
+        public T fromSnapshot(final Statistic in) {
             return this
                     .count(in.getCount())
                     .durationStart(in.getDurationStart())
@@ -180,7 +180,11 @@ public class Statistic {
             "count", "duration_start", "min", "max", "duration_end", "period", "sum", "period_end", "duration", "period_start", "avg", "groupby", "unit"
     })
 
-    protected Statistic(BigDecimal count, String durationStart, BigDecimal min, BigDecimal max, String durationEnd, BigDecimal period, BigDecimal sum, String periodEnd, BigDecimal duration, String periodStart, BigDecimal avg, String groupby, String unit) {
+    protected Statistic(final BigDecimal count, final String durationStart, final BigDecimal min,
+                        final BigDecimal max, final String durationEnd, final BigDecimal period,
+                        final BigDecimal sum, final String periodEnd, final BigDecimal duration,
+                        final String periodStart, final BigDecimal avg, final String groupby,
+                        final String unit) {
         this.count = count;
         this.durationStart = durationStart;
         this.min = min;
@@ -200,7 +204,7 @@ public class Statistic {
         return count;
     }
 
-    public void setCount(BigDecimal count) {
+    public void setCount(final BigDecimal count) {
         this.count = count;
     }
 
@@ -208,7 +212,7 @@ public class Statistic {
         return durationStart;
     }
 
-    public void setDurationStart(String durationStart) {
+    public void setDurationStart(final String durationStart) {
         this.durationStart = durationStart;
     }
 
@@ -216,7 +220,7 @@ public class Statistic {
         return min;
     }
 
-    public void setMin(BigDecimal min) {
+    public void setMin(final BigDecimal min) {
         this.min = min;
     }
 
@@ -224,7 +228,7 @@ public class Statistic {
         return max;
     }
 
-    public void setMax(BigDecimal max) {
+    public void setMax(final BigDecimal max) {
         this.max = max;
     }
 
@@ -232,7 +236,7 @@ public class Statistic {
         return durationEnd;
     }
 
-    public void setDurationEnd(String durationEnd) {
+    public void setDurationEnd(final String durationEnd) {
         this.durationEnd = durationEnd;
     }
 
@@ -240,7 +244,7 @@ public class Statistic {
         return period;
     }
 
-    public void setPeriod(BigDecimal period) {
+    public void setPeriod(final BigDecimal period) {
         this.period = period;
     }
 
@@ -248,7 +252,7 @@ public class Statistic {
         return sum;
     }
 
-    public void setSum(BigDecimal sum) {
+    public void setSum(final BigDecimal sum) {
         this.sum = sum;
     }
 
@@ -256,7 +260,7 @@ public class Statistic {
         return periodEnd;
     }
 
-    public void setPeriodEnd(String periodEnd) {
+    public void setPeriodEnd(final String periodEnd) {
         this.periodEnd = periodEnd;
     }
 
@@ -264,7 +268,7 @@ public class Statistic {
         return duration;
     }
 
-    public void setDuration(BigDecimal duration) {
+    public void setDuration(final BigDecimal duration) {
         this.duration = duration;
     }
 
@@ -272,7 +276,7 @@ public class Statistic {
         return periodStart;
     }
 
-    public void setPeriodStart(String periodStart) {
+    public void setPeriodStart(final String periodStart) {
         this.periodStart = periodStart;
     }
 
@@ -280,7 +284,7 @@ public class Statistic {
         return avg;
     }
 
-    public void setAvg(BigDecimal avg) {
+    public void setAvg(final BigDecimal avg) {
         this.avg = avg;
     }
 
@@ -288,7 +292,7 @@ public class Statistic {
         return groupby;
     }
 
-    public void setGroupby(String groupby) {
+    public void setGroupby(final String groupby) {
         this.groupby = groupby;
     }
 
@@ -296,7 +300,7 @@ public class Statistic {
         return unit;
     }
 
-    public void setUnit(String unit) {
+    public void setUnit(final String unit) {
         this.unit = unit;
     }
 
@@ -316,8 +320,6 @@ public class Statistic {
                 .add("groupby", groupby)
                 .add("unit", unit);
     }
-
-
 
     @Override
     public String toString() {
