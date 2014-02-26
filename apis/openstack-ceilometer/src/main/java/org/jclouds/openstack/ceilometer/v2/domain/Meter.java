@@ -56,7 +56,7 @@ public class Meter {
     }
 
     public Builder<?> toBuilder() {
-        return new ConcreteBuilder().fromSnapshot(this);
+        return new ConcreteBuilder().fromMeter(this);
     }
 
     public abstract static class Builder<T extends Builder<T>> {
@@ -115,7 +115,7 @@ public class Meter {
             return new Meter(user, name, resource, source, meterId, project, type, unit);
         }
 
-        public T fromSnapshot(final Meter in) {
+        public T fromMeter(final Meter in) {
             return this
                     .user(in.getUser())
                     .name(in.getName())
