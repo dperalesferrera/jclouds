@@ -18,10 +18,15 @@ package org.jclouds.openstack.ceilometer.v2.domain;
 
 import com.google.common.base.Objects;
 import com.google.common.base.Objects.ToStringHelper;
+import com.google.common.collect.ImmutableMap;
+import org.jclouds.javax.annotation.Nullable;
 
 import javax.inject.Named;
 import java.beans.ConstructorProperties;
 import java.math.BigDecimal;
+import java.util.Map;
+
+import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
  * An Openstack Ceilometer Statistic.
@@ -34,7 +39,7 @@ public class Statistic {
     }
 
     public Builder<?> toBuilder() {
-        return new ConcreteBuilder().fromSnapshot(this);
+        return new ConcreteBuilder().fromStatistic(this);
     }
 
     public abstract static class Builder<T extends Builder<T>> {
@@ -51,7 +56,7 @@ public class Statistic {
         protected BigDecimal duration;
         protected String periodStart;
         protected BigDecimal avg;
-        protected String groupby;
+        protected Map<String, String> groupby = ImmutableMap.of();
         protected String unit;
 
         public T count(final BigDecimal count) {
@@ -109,7 +114,7 @@ public class Statistic {
             return self();
         }
 
-        public T groupby(final String groupby) {
+        public T groupby(final Map<String, String> groupby) {
             this.groupby = groupby;
             return self();
         }
@@ -124,7 +129,7 @@ public class Statistic {
             return new Statistic(count, durationStart, min, max, durationEnd, period, sum, periodEnd, duration, periodStart, avg, groupby, unit);
         }
 
-        public T fromSnapshot(final Statistic in) {
+        public T fromStatistic(final Statistic in) {
             return this
                     .count(in.getCount())
                     .durationStart(in.getDurationStart())
@@ -172,7 +177,7 @@ public class Statistic {
     @Named("avg")
     private BigDecimal avg;
     @Named("groupby")
-    private String groupby;
+    private final Map<String, String> groupby;
     @Named("unit")
     private String unit;
 
@@ -183,7 +188,7 @@ public class Statistic {
     protected Statistic(final BigDecimal count, final String durationStart, final BigDecimal min,
                         final BigDecimal max, final String durationEnd, final BigDecimal period,
                         final BigDecimal sum, final String periodEnd, final BigDecimal duration,
-                        final String periodStart, final BigDecimal avg, final String groupby,
+                        final String periodStart, final BigDecimal avg, @Nullable final Map<String, String> groupby,
                         final String unit) {
         this.count = count;
         this.durationStart = durationStart;
@@ -196,7 +201,7 @@ public class Statistic {
         this.duration = duration;
         this.periodStart = periodStart;
         this.avg = avg;
-        this.groupby = groupby;
+        this.groupby = ImmutableMap.copyOf(checkNotNull(groupby, "groupby"));
         this.unit = unit;
     }
 
@@ -204,104 +209,53 @@ public class Statistic {
         return count;
     }
 
-    public void setCount(final BigDecimal count) {
-        this.count = count;
-    }
-
     public String getDurationStart() {
         return durationStart;
-    }
-
-    public void setDurationStart(final String durationStart) {
-        this.durationStart = durationStart;
     }
 
     public BigDecimal getMin() {
         return min;
     }
 
-    public void setMin(final BigDecimal min) {
-        this.min = min;
-    }
-
     public BigDecimal getMax() {
         return max;
-    }
-
-    public void setMax(final BigDecimal max) {
-        this.max = max;
     }
 
     public String getDurationEnd() {
         return durationEnd;
     }
 
-    public void setDurationEnd(final String durationEnd) {
-        this.durationEnd = durationEnd;
-    }
-
     public BigDecimal getPeriod() {
         return period;
-    }
-
-    public void setPeriod(final BigDecimal period) {
-        this.period = period;
     }
 
     public BigDecimal getSum() {
         return sum;
     }
 
-    public void setSum(final BigDecimal sum) {
-        this.sum = sum;
-    }
-
     public String getPeriodEnd() {
         return periodEnd;
-    }
-
-    public void setPeriodEnd(final String periodEnd) {
-        this.periodEnd = periodEnd;
     }
 
     public BigDecimal getDuration() {
         return duration;
     }
 
-    public void setDuration(final BigDecimal duration) {
-        this.duration = duration;
-    }
-
     public String getPeriodStart() {
         return periodStart;
-    }
-
-    public void setPeriodStart(final String periodStart) {
-        this.periodStart = periodStart;
     }
 
     public BigDecimal getAvg() {
         return avg;
     }
 
-    public void setAvg(final BigDecimal avg) {
-        this.avg = avg;
-    }
-
-    public String getGroupby() {
+    @Nullable
+    public Map<String, String> getGroupby() {
         return groupby;
-    }
-
-    public void setGroupby(final String groupby) {
-        this.groupby = groupby;
     }
 
     public String getUnit() {
         return unit;
-    }
-
-    public void setUnit(final String unit) {
-        this.unit = unit;
     }
 
     protected ToStringHelper string() {
@@ -325,18 +279,20 @@ public class Statistic {
     public String toString() {
         return "Statistic{" +
                 "count=" + count +
-                ", durationStart=" + durationStart +
+                ", durationStart='" + durationStart + '\'' +
                 ", min=" + min +
                 ", max=" + max +
-                ", durationEnd=" + durationEnd +
+                ", durationEnd='" + durationEnd + '\'' +
                 ", period=" + period +
                 ", sum=" + sum +
-                ", periodEnd=" + periodEnd +
+                ", periodEnd='" + periodEnd + '\'' +
                 ", duration=" + duration +
-                ", periodStart=" + periodStart +
+                ", periodStart='" + periodStart + '\'' +
                 ", avg=" + avg +
-                ", groupby='" + groupby + '\'' +
+                ", groupby=" + groupby +
                 ", unit='" + unit + '\'' +
                 '}';
     }
+
+
 }
