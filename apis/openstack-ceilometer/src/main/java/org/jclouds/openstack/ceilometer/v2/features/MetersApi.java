@@ -22,6 +22,7 @@ import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.openstack.ceilometer.v2.domain.Meter;
 import org.jclouds.openstack.ceilometer.v2.domain.Statistic;
 import org.jclouds.openstack.ceilometer.v2.options.QueryOptions;
+import org.jclouds.openstack.ceilometer.v2.options.StatisticsQueryOptions;
 import org.jclouds.openstack.keystone.v2_0.filters.AuthenticateRequest;
 import org.jclouds.rest.annotations.Fallback;
 import org.jclouds.rest.annotations.RequestFilters;
@@ -38,15 +39,16 @@ import javax.ws.rs.core.MediaType;
 /**
  * Provides synchronous access to Ceilometer Meters via their REST API.
  *
- * @see <a href="http://api.openstack.org/">API Doc</a>
+ * @see  <a href="http://api.openstack.org/">API Doc</a>
  */
 @SkipEncoding({'/', '='})
 @RequestFilters(AuthenticateRequest.class)
 public interface MetersApi {
 
-    /**
-     * Return all known meters, based on the data recorded so far..
+     /**
+     * Return all known meters, based on the data recorded so far
      *
+     * @param options the options
      * @return Gets information for meters
      */
     @Named("meters:list")
@@ -54,11 +56,11 @@ public interface MetersApi {
     @Path("/v2/meters")
     @Consumes(MediaType.APPLICATION_JSON)
     @Fallback(EmptyFluentIterableOnNotFoundOr404.class)
-    FluentIterable<Meter> list();
+    FluentIterable<Meter> list(QueryOptions... options);
 
 
     /**
-     * Return samples for the meter..
+     * Return meter information
      *
      * @param id Id of the Meter
      * @return Return samples for the meter.
@@ -75,6 +77,7 @@ public interface MetersApi {
      * Computes the statistics of the samples in a specified time range
      *
      * @param id Id of the Meter
+     * @param options the options
      * @return Return samples for the meter.
      */
     @Named("meters:statistics")
@@ -82,7 +85,7 @@ public interface MetersApi {
     @Path("/v2/meters/{id}/statistics")
     @Consumes(MediaType.APPLICATION_JSON)
     @Fallback(NullOnNotFoundOr404.class)
-    FluentIterable<Statistic> statistics(@PathParam("id") String id, QueryOptions... options);
+    FluentIterable<Statistic> statistics(@PathParam("id") String id, StatisticsQueryOptions... options);
 
 
 }

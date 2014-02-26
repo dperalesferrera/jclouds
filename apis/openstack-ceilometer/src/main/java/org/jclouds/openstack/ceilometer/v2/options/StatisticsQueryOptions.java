@@ -16,8 +16,7 @@
  */
 package org.jclouds.openstack.ceilometer.v2.options;
 
-import com.google.common.collect.Multimap;
-import org.jclouds.http.options.BaseHttpRequestOptions;
+import java.util.ArrayList;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
@@ -26,18 +25,29 @@ import static com.google.common.base.Preconditions.checkNotNull;
  *
  * @see <a href="http://wiki.openstack.org/OpenStackAPI_1-1" />
  */
-public class QueryOptions extends BaseHttpRequestOptions {
+public class StatisticsQueryOptions extends QueryOptions {
 
-    public QueryOptions queryParameters(final Multimap<String, String> queryParams) {
-        checkNotNull(queryParams, "q");
-        queryParameters.putAll(queryParams);
+   public StatisticsQueryOptions groupby(final ArrayList<String> groupby) {
+        checkNotNull(groupby, "groupby");
+        queryParameters.putAll("groupby", groupby);
+        return this;
+    }
+
+    public StatisticsQueryOptions period(final int period) {
+        queryParameters.put("period", Integer.toString(period));
         return this;
     }
 
     public static class Builder {
-        public static QueryOptions queryParameters(final Multimap<String, String> queryParams) {
-            final QueryOptions options = new QueryOptions();
-            return options.queryParameters(queryParams);
+
+        public static StatisticsQueryOptions groupby(final ArrayList<String> groupby) {
+            final StatisticsQueryOptions options = new StatisticsQueryOptions();
+            return options.groupby(groupby);
+        }
+
+        public static StatisticsQueryOptions period(final int period) {
+            final StatisticsQueryOptions options = new StatisticsQueryOptions();
+            return options.period(period);
         }
     }
 }
