@@ -21,6 +21,7 @@ import org.jclouds.Fallbacks.EmptyFluentIterableOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
 import org.jclouds.openstack.ceilometer.v2.domain.Meter;
 import org.jclouds.openstack.ceilometer.v2.domain.Statistic;
+import org.jclouds.openstack.ceilometer.v2.options.LimitedQueryOptions;
 import org.jclouds.openstack.ceilometer.v2.options.QueryOptions;
 import org.jclouds.openstack.ceilometer.v2.options.StatisticsQueryOptions;
 import org.jclouds.openstack.keystone.v2_0.filters.AuthenticateRequest;
@@ -49,43 +50,74 @@ public interface MetersApi {
      * Return all known meters, based on the data recorded so far
      *
      * @param options the options
-     * @return Gets information for meters
+     * @return Lists meters, based on the data recorded so far.
      */
     @Named("meters:list")
     @GET
     @Path("/v2/meters")
     @Consumes(MediaType.APPLICATION_JSON)
     @Fallback(EmptyFluentIterableOnNotFoundOr404.class)
-    FluentIterable<Meter> list(QueryOptions... options);
+    FluentIterable<Meter> getMeters(QueryOptions... options);
 
 
     /**
      * Return meter information
      *
-     * @param id Id of the Meter
-     * @return Return samples for the meter.
+     * @param meterName Id of the Meter
+     * @param options the options
+     * @return Return samples for a specified meter.
      */
     @Named("meters:get")
     @GET
-    @Path("/v2/meters/{id}")
+    @Path("/v2/meters/{meter_name}")
     @SelectJson("meter")
     @Consumes(MediaType.APPLICATION_JSON)
     @Fallback(NullOnNotFoundOr404.class)
-    Meter get(@PathParam("id") String id);
+    Meter getMeter(@PathParam("meter_name") String meterName, LimitedQueryOptions... options);
 
     /**
      * Computes the statistics of the samples in a specified time range
      *
-     * @param id Id of the Meter
+     * @param meterName Id of the Meter
      * @param options the options
      * @return Return samples for the meter.
      */
     @Named("meters:statistics")
     @GET
-    @Path("/v2/meters/{id}/statistics")
+    @Path("/v2/meters/{meter_name}/statistics")
     @Consumes(MediaType.APPLICATION_JSON)
     @Fallback(NullOnNotFoundOr404.class)
-    FluentIterable<Statistic> statistics(@PathParam("id") String id, StatisticsQueryOptions... options);
+    FluentIterable<Statistic> getStatistic(@PathParam("meter_name") String meterName, StatisticsQueryOptions... options);
+
+
+    /**
+     * Lists definitions for all resources.
+     *
+     * @param options the options
+     * @return Lists definitions for all resources.
+     */
+    @Named("resources:list")
+    @GET
+    @Path("/v2/resources")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Fallback(EmptyFluentIterableOnNotFoundOr404.class)
+    FluentIterable<Meter> getResources(QueryOptions... options);
+
+
+    /**
+     * Return details for a specified resource
+     *
+     * @param resourceId Id of the Resoruce
+     * @return Return details for a specified resource
+     */
+    @Named("resources:get")
+    @GET
+    @Path("/v2/resources/{resource_id}")
+    @SelectJson("resource")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Fallback(NullOnNotFoundOr404.class)
+    Meter getResource(@PathParam("resource_id") String resourceId);
+
 
 
 }
