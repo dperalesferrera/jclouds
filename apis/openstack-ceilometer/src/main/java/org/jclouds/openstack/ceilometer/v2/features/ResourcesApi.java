@@ -19,11 +19,8 @@ package org.jclouds.openstack.ceilometer.v2.features;
 import com.google.common.collect.FluentIterable;
 import org.jclouds.Fallbacks.EmptyFluentIterableOnNotFoundOr404;
 import org.jclouds.Fallbacks.NullOnNotFoundOr404;
-import org.jclouds.openstack.ceilometer.v2.domain.Meter;
-import org.jclouds.openstack.ceilometer.v2.domain.Statistic;
-import org.jclouds.openstack.ceilometer.v2.options.LimitedQueryOptions;
+import org.jclouds.openstack.ceilometer.v2.domain.Resource;
 import org.jclouds.openstack.ceilometer.v2.options.QueryOptions;
-import org.jclouds.openstack.ceilometer.v2.options.StatisticsQueryOptions;
 import org.jclouds.openstack.keystone.v2_0.filters.AuthenticateRequest;
 import org.jclouds.rest.annotations.Fallback;
 import org.jclouds.rest.annotations.RequestFilters;
@@ -38,55 +35,42 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.core.MediaType;
 
 /**
- * Provides synchronous access to Ceilometer Meters via their REST API.
+ * Provides synchronous access to Ceilometer Resources via their REST API.
  *
  * @see  <a href="http://api.openstack.org/">API Doc</a>
  */
 @SkipEncoding({'/', '='})
 @RequestFilters(AuthenticateRequest.class)
-public interface MetersApi {
+public interface ResourcesApi {
 
-     /**
-     * Return all known meters, based on the data recorded so far
+    /**
+     * Lists definitions for all resources.
      *
      * @param options the options
-     * @return Lists meters, based on the data recorded so far.
+     * @return Lists definitions for all resources.
      */
-    @Named("meters:list")
+    @Named("resources:list")
     @GET
-    @Path("/v2/meters")
+    @Path("/v2/resources")
     @Consumes(MediaType.APPLICATION_JSON)
     @Fallback(EmptyFluentIterableOnNotFoundOr404.class)
-    FluentIterable<Meter> list(QueryOptions... options);
+    FluentIterable<Resource> list(QueryOptions... options);
 
 
     /**
-     * Return meter information
+     * Return details for a specified resource
      *
-     * @param meterName Id of the Meter
-     * @param options the options
-     * @return Return samples for a specified meter.
+     * @param resourceId Id of the Resoruce
+     * @return Return details for a specified resource
      */
-    @Named("meters:get")
+    @Named("resources:get")
     @GET
-    @Path("/v2/meters/{meter_name}")
-    @SelectJson("meter")
+    @Path("/v2/resources/{resource_id}")
+    @SelectJson("resource")
     @Consumes(MediaType.APPLICATION_JSON)
     @Fallback(NullOnNotFoundOr404.class)
-    Meter get(@PathParam("meter_name") String meterName, LimitedQueryOptions... options);
+    Resource get(@PathParam("resource_id") String resourceId);
 
-    /**
-     * Computes the statistics of the samples in a specified time range
-     *
-     * @param meterName Id of the Meter
-     * @param options the options
-     * @return Return samples for the meter.
-     */
-    @Named("meters:statistics")
-    @GET
-    @Path("/v2/meters/{meter_name}/statistics")
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Fallback(NullOnNotFoundOr404.class)
-    FluentIterable<Statistic> getStatistic(@PathParam("meter_name") String meterName, StatisticsQueryOptions... options);
+
 
 }

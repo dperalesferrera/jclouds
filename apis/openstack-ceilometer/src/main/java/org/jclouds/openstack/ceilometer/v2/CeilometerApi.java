@@ -21,6 +21,7 @@ import org.jclouds.javax.annotation.Nullable;
 import org.jclouds.location.Zone;
 import org.jclouds.location.functions.ZoneToEndpoint;
 import org.jclouds.openstack.ceilometer.v2.features.MetersApi;
+import org.jclouds.openstack.ceilometer.v2.features.ResourcesApi;
 import org.jclouds.rest.annotations.Delegate;
 import org.jclouds.rest.annotations.EndpointParam;
 
@@ -42,10 +43,17 @@ public interface CeilometerApi extends Closeable {
    Set<String> getConfiguredZones();
 
    /**
-    * Provides synchronous access to meters.
+    * Provides access to meters.
     */
    @Delegate
    MetersApi getMetersApi(
          @EndpointParam(parser = ZoneToEndpoint.class) @Nullable String zone);
+
+    /**
+     * Provides access to resources.
+     */
+    @Delegate
+    ResourcesApi getResourcesApi(
+            @EndpointParam(parser = ZoneToEndpoint.class) @Nullable String zone);
 
 }
