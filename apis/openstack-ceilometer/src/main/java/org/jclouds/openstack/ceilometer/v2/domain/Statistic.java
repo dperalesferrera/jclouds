@@ -115,7 +115,7 @@ public class Statistic {
         }
 
         public T groupby(final Map<String, String> groupby) {
-            this.groupby = groupby;
+            this.groupby = ImmutableMap.copyOf(checkNotNull(groupby, "groupby"));
             return self();
         }
 
